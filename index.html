@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidaturas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>📋 Candidaturas</h1>
+      <div class="header-actions">
+        <button id="btnNovo" class="btn btn-primary">+ Criar processo</button>
+        <div class="view-toggle">
+          <button id="btnBoard" class="toggle-btn active">Board</button>
+          <button id="btnArchive" class="toggle-btn">Arquivo</button>
+        </div>
+        <button id="btnNotify" class="btn btn-ghost" title="Ativar notificações do navegador para prazos vencidos">🔔 Notificações</button>
+        <button id="btnExport" class="btn btn-ghost" title="Exportar backup em JSON">⭳ Exportar</button>
+        <button id="btnImport" class="btn btn-ghost" title="Importar backup em JSON">⭱ Importar</button>
+        <input type="file" id="fileImport" accept=".json" hidden>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside id="actionsPanel"></aside>
+      <main id="board"></main>
+      <section id="archiveView" hidden></section>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
